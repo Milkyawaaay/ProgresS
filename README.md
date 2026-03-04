@@ -59,55 +59,54 @@
 | created_at | DateTime | Дата создания записи |
 | updated_at | DateTime | Дата последнего обновления |
 
-### Пошаговая установка
+# Пошаговая установка
 ## Клонируйте репозиторий
 
-git clone https://github.com/Milkyawaaay/first.git 
+git clone https://github.com/Milkyawaaay/ProgresS.git 
 cd ProgresS 
 
-## Создайте и активируйте виртуальное окружение
-
-# Создание виртуального окружения
+## Создание виртуального окружения
 python -m venv venv
 
-# Активация на Windows
+## Активация на Windows
 venv\Scripts\activate
 
-# Активация на macOS/Linux
+## Активация на macOS/Linux
 source venv/bin/activate
 
-##Установите зависимости
+## Установите зависимости
 pip install -r requirements.txt
 
-##Настройте переменные окружения
+# Настройте переменные окружения
 
-# Django settings
+## Django settings
 SECRET_KEY=your-secret-key-here
 DEBUG=True
 ALLOWED_HOSTS=localhost,127.0.0.1
 
-# Database settings (для PostgreSQL)
+## Database settings (для PostgreSQL)
 DB_NAME=workout_db
 DB_USER=postgres
 DB_PASSWORD=your-password
 DB_HOST=localhost
 DB_PORT=5432
 
-# Для SQLite можно использовать:
-# DATABASE_URL=sqlite:///db.sqlite3
+## Для SQLite можно использовать:
 
-##Выполните миграции базы данных
+database_url=sqlite:///db.sqlite3
+
+## Выполните миграции базы данных
 
 python manage.py migrate
 
-##Создайте суперпользователя (для доступа в админ-панель)
+## Создайте суперпользователя (для доступа в админ-панель)
 
 python manage.py createsuperuser
 
-##Загрузите начальные данные (опционально)
+## Загрузите начальные данные (опционально)
 
 python manage.py loaddata fixtures/exercises.json
 
-##Запустите сервер разработки
+## Запустите сервер разработки
 
 python manage.py runserver
